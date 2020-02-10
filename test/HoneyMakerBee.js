@@ -53,4 +53,10 @@ describe('HoneyMakerBee class functionality', function() {
     expect(honeyBee.honeyPot).to.equal(2);
   });
 
+    it('should not allow honeyPot to fall below 0 if giveHoney is called while honeyPot is 0', function() {
+      honeyBee.makeHoney();
+      honeyBee.giveHoney();
+      honeyBee.giveHoney();
+      expect(honeyBee.honeyPot).to.equal(0);
+    });
 });
