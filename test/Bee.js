@@ -26,6 +26,10 @@ describe('Bee class functionality', function() {
     expect(bee.eat).to.be.a('function');
   });
 
+  it('should set the `food` property to `nothing` when the `eat` method is called', function() {
+    bee.eat()
+    expect(bee.food).to.equal('nothing')
+  })
   /*  New methods and properties  */
 
   it('should have a `job` property that is set to `keep on growing`', function() {
