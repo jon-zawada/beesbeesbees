@@ -22,4 +22,8 @@ describe('Grub class functionality', function() {
     expect(grub.eat).to.be.a('function');
   });
 
+  it('should changed the `food` property to `no food` when eat is called', function() {
+    grub.eat()
+    expect(grub.food).to.equal('nothing')
+  })
 });
